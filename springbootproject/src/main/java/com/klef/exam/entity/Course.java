@@ -1,0 +1,43 @@
+package com.klef.exam.entity;
+
+import jakarta.persistence.*;
+
+@Entity
+public class Course {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    private String title;
+    private String faculty;
+    private int credits;
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getFaculty() {
+        return faculty;
+    }
+    public void setFaculty(String faculty) {
+        this.faculty = faculty;
+    }
+
+    public int getCredits() {
+        return credits;
+    }
+    public void setCredits(int credits) {
+        this.credits = credits;
+    }
+}
